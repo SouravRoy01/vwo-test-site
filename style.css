@@ -1,48 +1,93 @@
+/* Base Styles */
 body {
-  font-family: Arial, sans-serif;
-  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f9f9f9;
   margin: 0;
   padding: 0;
-  background: #f0f0f0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
+/* Header & Footer */
 header, footer {
-  background: #333;
+  background-color: #333;
   color: #fff;
-  padding: 1em 0;
+  text-align: center;
+  padding: 1.5em 1em;
 }
 
+header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+header p, footer p {
+  margin: 0.5em 0 0;
+}
+
+/* Main Content */
 main {
-  padding: 2em;
+  flex: 1;
+  padding: 2em 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
 }
 
+/* Button */
 button {
-  padding: 10px 20px;
-  font-size: 16px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 5px;
   cursor: pointer;
-  margin-top: 10px;
+  transition: background 0.3s ease;
 }
 
-/* Form Styles */
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Form Section */
 .form-section {
-  margin-top: 3em;
+  background: white;
+  padding: 2em;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.form-section h2 {
+  margin-bottom: 1em;
+  font-size: 1.5em;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  max-width: 400px;
-  margin: 0 auto;
+  gap: 1em;
 }
 
 input, textarea {
   width: 100%;
   padding: 10px;
-  font-size: 14px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 textarea {
   resize: vertical;
+}
+
+/* Click and Form Message */
+#clickMessage, #formMessage {
+  margin-top: 1em;
+  font-weight: bold;
+  color: #28a745;
 }
